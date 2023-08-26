@@ -3,7 +3,7 @@ import  Footer  from './Footer';
 import Content from './Content';
 import AddItem from './AddItem';
 import React, { useState } from 'react';
-
+import Search from './Search';
 
 function App() {
     const [items, setItems] = useState(
@@ -56,6 +56,9 @@ function App() {
         addItem(newItem)
         setNewItem('')
       };
+
+    const [search, setSearch] = useState('')
+
   return (
     <div className="App">
       <Header />
@@ -64,8 +67,13 @@ function App() {
       setNewItem = {setNewItem}
       handleSubmit = {handleSubmit}
       />
+      <Search
+      search = {search}
+      setSearch = {setSearch}
+      
+      />
       <Content 
-      items={items}
+      items={items.filter((item)=>(item.item.toLowerCase()).includes(search.toLowerCase()))}
       handleCheck = {handleCheck}
       handleDelete = {handleDelete}
       />
