@@ -117,7 +117,7 @@ ul li::before {
   outline: none;
 }
 
-/* .addForm {
+.addForm {
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -182,4 +182,4 @@ button:hover {
   padding: 0.25rem;
   border-radius: 0.25rem;
   outline: none;
-} */
+}
